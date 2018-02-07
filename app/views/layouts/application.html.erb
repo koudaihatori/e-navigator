@@ -20,7 +20,9 @@
           <li><%= link_to "ログアウト", '#', class: 'navi' %></li>
         </ul>
       <% else %>
-       <li>hello</li>
+          <li><%= link_to "e-navigator", '#', class: 'navi' %></li>
+          <li><%= link_to "サインアップ", new_user_registration_path, class: 'navi' %></li>
+          <li><%= link_to "ログイン", new_user_session_path, class: 'navi' %></li>
       <% end %>
     </div>
   </header>
