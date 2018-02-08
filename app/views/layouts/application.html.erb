@@ -16,8 +16,7 @@
           <li><%= link_to "e-navigator", '#', class: 'navi' %></li>
           <li><%= link_to "プロフィール", edit_user_path(id: current_user.id) , class: 'navi' %></li>
           <li><%= link_to "自分の面接一覧", '#', class: 'navi' %></li>
-          <li><%= link_to "メール", '#', class: 'navi' %></li>
-          <li><%= link_to "ログアウト", '#', class: 'navi' %></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, class: 'navi' %></li>
         </ul>
       <% else %>
           <li><%= link_to "e-navigator", '#', class: 'navi' %></li>
