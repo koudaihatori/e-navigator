@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action :user_logged_in?
+  before_action :authenticate_user!
 
   def index
   end
@@ -20,9 +20,5 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:email, :name, :birthday, :sex, :school)
-  end
-
-  def user_logged_in?
-    redirect_to new_user_registration_path unless user_signed_in?
   end
 end
